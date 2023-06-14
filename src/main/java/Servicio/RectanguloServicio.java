@@ -24,5 +24,22 @@ public class RectanguloServicio {
         return NuevoRectangulo;
     }
     
+    public int Area(Rectangulo NuevoRectangulo){
+        int area = NuevoRectangulo.getBase() * NuevoRectangulo.getAltura();
+        return area;
+    }
     
+    public int Perimetro(Rectangulo NuevoRectangulo){
+        int perimetro = (NuevoRectangulo.getBase() + NuevoRectangulo.getAltura()) * 2;
+        return perimetro;
+    }
+    
+    public void DibujarRectangulo(Rectangulo NuevoRectangulo){
+        for (int i = 0; i < NuevoRectangulo.getAltura(); i++) {
+            for (int j = 0; j < NuevoRectangulo.getBase(); j++) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
 }
